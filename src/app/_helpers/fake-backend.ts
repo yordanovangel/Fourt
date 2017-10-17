@@ -12,9 +12,9 @@ import {MockBackend, MockConnection} from '@angular/http/testing';
 export function fakeBackendFactory(backend: MockBackend, options: BaseRequestOptions, realBackend: XHRBackend) {
   // array in local storage for registered users
   const users = [
-    {firstName: 'Angel', lastName: 'Yordanov'},
-    {firstName: 'Ivo', lastName: 'Mishev'},
-    {firstName: 'Vania', lastName: 'Ivanova'}
+    {id: '1', gender: 'male', firstName: 'Angel', lastName: 'Yordanov'},
+    {id: '2', gender: 'male', firstName: 'Ivo', lastName: 'Mishev'},
+    {id: '3', gender: 'female', firstName: 'Vania', lastName: 'Ivanova'}
   ];
 
   // configure fake backend

@@ -7,26 +7,21 @@ import {UserService} from '../../_services/user.service';
   styleUrls: ['./find-person.component.css']
 })
 export class FindPersonComponent implements OnInit {
-  userName: string;
-  users: string
+  userName = '';
+  users = [];
+
 
   constructor(private userService: UserService) {
   }
 
   ngOnInit() {
-this.getUsers();
+    this.getUsers();
   }
 
   getUsers() {
     this.userService.getUsers()
       .subscribe(users => {
-        this.users = users;
-        console.log(this.users);
+        this.users = users.json();
       });
   }
-
-  onType(user: string) {
-
-  }
-
 }

@@ -13,6 +13,7 @@ import {FooterComponent} from './footer/footer.component';
 import {fakeBackend} from './_helpers/fake-backend';
 import {MockBackend} from '@angular/http/testing';
 import {UserService} from './_services/user.service';
+import { FilterPipe } from './_pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {UserService} from './_services/user.service';
     HomePageComponent,
     FindPersonComponent,
     PersonInfoComponent,
-    FooterComponent
+    FooterComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
