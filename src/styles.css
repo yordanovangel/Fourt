@@ -5,3 +5,14 @@
 .navbar-default{
   background-color: lightgrey;
 }
+img.custom-img-banner {
+  box-shadow: 5px 10px 20px 2px grey;
+}
+footer.custom-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.custom-banner {
+  margin: 10% 0;
+}

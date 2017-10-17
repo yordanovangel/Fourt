@@ -1,3 +1,11 @@
-<p>
-  find-person works!
-</p>
+<div class="row">
+  <div class="col-12">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for..."
+             [ngModel]="userName" #username="ngModel" (keyup)="username.value.length>2 ? onType(username.value):''">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">Go!</button>
+      </span>
+    </div>
+  </div>
+</div>
