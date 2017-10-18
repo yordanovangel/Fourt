@@ -1,21 +1,33 @@
 <div class="row">
   <div *ngIf="users" class="col-12">
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for..."
+    <div class="input-group custom-width">
+      <label for="search" class="control-label">Search for person</label>
+      <input id="search" type="text" class="form-control" placeholder="Type person name..."
              [(ngModel)]="userName">
-      <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Go!</button>
-      </span>
     </div>
     <hr>
     <ul class="list-group">
       <li
-        class="list-group-item"
-        *ngFor="let user of users | filter:userName:'firstName':'lastName'"
-      >
-        <span class="badge">{{user.gender}}</span>
-        <strong>{{user.firstName}}</strong>
+        class="list-group-item custom-li-btn"
+        *ngFor="let user of users | filter:userName:'firstName':'surname'"
+      (click)="showUserInfo(user)">
+        <span class="badge custom-badge-color">{{user.gender}}</span>
+        <strong>{{user.firstName}} {{user.surname}}</strong>
       </li>
     </ul>
+  </div>
+</div>
+<div class="" *ngIf="showInfo">
+  <div class="panel panel-success custom-modal">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{currentUser.firstName}} {{currentUser.surname}}</h3>
+    </div>
+    <div class="panel-body">
+     <table class="table table-responsive"><thead><tr><th>Take home pay</th><th>Income tax paid</th><th>National insurance paid</th></tr></thead>
+     <tbody><tr><td>{{currentUser.takeHome}}</td><td>{{currentUser.incomTax}}</td><td>{{currentUser.natInsurance}}</td></tr></tbody></table>
+    </div>
+    <div class="panel-footer text-right">
+      <button type="button" class="btn btn-primary btn-sm" (click)="close()">CLOSE</button>
+    </div>
   </div>
 </div>

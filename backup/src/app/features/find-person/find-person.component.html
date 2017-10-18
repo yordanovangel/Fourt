@@ -1,0 +1,21 @@
+<div class="row">
+  <div *ngIf="users" class="col-12">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for..."
+             [(ngModel)]="userName">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">Go!</button>
+      </span>
+    </div>
+    <hr>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let user of users | filter:userName:'firstName':'lastName'"
+      >
+        <span class="badge">{{user.gender}}</span>
+        <strong>{{user.firstName}}</strong>
+      </li>
+    </ul>
+  </div>
+</div>

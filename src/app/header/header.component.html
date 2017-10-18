@@ -1,14 +1,14 @@
-<nav class="navbar navbar-default">
+<nav class="custom-header">
   <div class="container">
-    <div class="navbar-header">
-      <a routerLink="/" class="navbar-brand">
-       Personal tax info
-      </a>
-    </div>
-    <div class="navbar-default">
-      <ul class="nav navbar-nav">
-        <li routerLinkActive="active"><a routerLink="/find-person">Search</a></li>
-      </ul>
+    <div class="row">
+      <div class="col-10 custom-title">
+        <a routerLink="/" class="navbar-brand custom-brand">
+          <img class="custom-img-logo" src="../../assets/tax-calc-logo.png" height="198" width="140"/> Personal tax info
+          </a>
+      </div>
+      <div class="col-2 custom-menu text-right">
+        <button id="searchBtn" routerLink="/find-person" class="btn btn-primary btn-sm custom-margin">Search</button>
+      </div>
     </div>
   </div>
 </nav>

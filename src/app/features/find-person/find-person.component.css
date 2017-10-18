@@ -1,0 +1,27 @@
+.custom-badge-color{
+  color: white;
+}
+.custom-width{
+  width: 50%;
+  margin: 0 auto;
+}
+.custom-li-btn{
+  cursor: pointer;
+}
+.custom-modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  top: 20%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px lightgrey;
+  z-index: 1000;
+}
+@media screen and (max-width: 767px){
+  .custom-width{
+    width: 100%;
+  }
+}

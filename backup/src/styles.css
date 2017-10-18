@@ -1,12 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.css";
-@import "/assets/theme.css";
 
-/*.navbar-default{
+.navbar-default{
   background-color: lightgrey;
-  margin-bottom: 25px;
-}*/
+}
 img.custom-img-banner {
   box-shadow: 5px 10px 20px 2px grey;
 }
@@ -15,6 +13,6 @@ footer.custom-footer {
   bottom: 0;
   width: 100%;
 }
-.btn{
-  cursor: pointer;
+.custom-banner {
+  margin: 10% 0;
 }

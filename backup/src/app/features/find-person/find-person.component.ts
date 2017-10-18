@@ -9,8 +9,6 @@ import {UserService} from '../../_services/user.service';
 export class FindPersonComponent implements OnInit {
   userName = '';
   users = [];
-  showInfo = false;
-  currentUser = {};
 
 
   constructor(private userService: UserService) {
@@ -25,15 +23,5 @@ export class FindPersonComponent implements OnInit {
       .subscribe(users => {
         this.users = users.json();
       });
-  }
-
-  showUserInfo(userSelected) {
-    console.log(userSelected);
-    this.currentUser = userSelected;
-    this.showInfo = true;
-  }
-
-  close() {
-    this.showInfo = false;
   }
 }
